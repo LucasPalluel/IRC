@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="/stylesheets/style.css" rel="stylesheet" type="text/css">
+  <link rel="icon" type="image/png" href="/images/favicon.png" />
+  <title>Chat App</title>
+</head>
+<body>
+
+    <div align= "center">
+      <h1>
+        <p id="welcome">Welcome on our IRC chat !</p>
+      </h1>
+    </div>
+    <table id="channels_table">
+      <tr>
+        <td>
+    <div id="room-container">
+
+    </div>
+
+
+      <form action="/room" method="POST" id="form-room">
+        <input name="room" type="text" required><p></p>
+        <button type="submit">New Room</button>
+      </td>
+      </tr>
+    </form>
+  </table>
+  <script src="http://localhost:8000/socket.io/socket.io.js"></script>
+  <script src="/lib/jquery/jquery.min.js"></script>
+  <script src="/javascripts/script.js"></script>
+  <script src="/javascripts/index.js"></script>
+</body>
+</html>

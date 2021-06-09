@@ -1,0 +1,116 @@
+body{
+   margin: 0;
+   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+   height: 100%;
+   width: 100%;
+   background-image: url(../images/chatbackground.png);
+   text-align: center;
+}
+html{
+  height: 100%;
+}
+
+#send-container{
+  background: rgba(0, 0, 0, 0.15);
+  padding: 0.25rem; position: fixed;
+  bottom: 0;
+  left: 10%;
+  right: 0;
+  display: flex; height: 3rem;
+  box-sizing: border-box;
+  backdrop-filter: blur(10px);
+  width: 90%;
+}
+
+#message-input{
+  border: none;
+  padding: 0 1rem;
+  flex-grow: 1;
+  border-radius: 2rem;
+  margin: 0.25rem;
+}
+
+#message-input:focus{
+  outline: none;
+}
+
+#send-container > button{
+  background: #333;
+  border: none;
+  padding: 0 1rem;
+  margin: 0.25rem;
+  border-radius: 3px;
+  outline: none;
+  color: #fff;
+}
+
+#message-container{
+  list-style-type: none;
+  margin:0 0 0 10%; padding: 0;
+  width: 90%;
+  padding-bottom: 3.5rem;
+}
+
+#message-container > div{
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  word-break:break-all;
+ /* background-color: #CCC; */
+  position: relative;
+  margin-left: 20px;
+  margin-bottom: 10px;
+ /* padding: 10px; */
+  background-color: #6db6ff;
+  text-align: left;
+  font: 400 .9em 'Open Sans', sans-serif;
+  border-radius: 10px;
+  box-shadow: 2.5px 2.5px #93c9ff;
+}
+
+#room-name{
+  font-size: 25px;
+  text-align: center;
+  word-break:break-all;
+}
+#back-to-channels{
+  padding:3px;
+  background-color: #282828	;
+  text-decoration: none;
+  color: ghostwhite;
+}
+
+#room-container{
+  padding-top:1%;
+  padding-left:2%;
+}
+
+#form-room{
+  padding-top:1%;
+  padding-left:2%;
+}
+.nav{
+  width: 10%;
+  height: 100%;
+  position: fixed;
+  display: block;
+  border-right: solid 2px black;
+  background-color: #303b42;
+  color: ghostwhite;
+}
+.commands{
+    padding-left: 10px;
+    text-align: left;
+}
+#welcome{
+  color: white;
+}
+#channels_table{
+  border: solid #374A53 2px;
+  border-radius: 5px;
+  background-color: #303b42;
+  padding: 10px;
+  box-shadow: 2.5px 2.5px #29353B;
+  margin: 0 auto;
+}

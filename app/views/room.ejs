@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="/stylesheets/style.css" rel="stylesheet" type="text/css">
+  <link rel="icon" type="image/png" href="/images/favicon.png" />
+  <title>Chat App</title>
+</head>
+
+<body>
+  <span class="nav">
+    <p id="room-name">
+      <%= roomName %>
+    </p>
+    <a href="/index.ejs" id="back-to-channels">Back to channels</a><br><br>
+    <div class="commands">
+      <li>/msg username</li>
+      <h6>Send private message</h6>
+      <li>/list</li>
+      <h6>Show channels</h6>
+      <li>/create name</li>
+      <h6>Create a channel</h6>
+      <li>/delete name</li>
+      <h6>Delete a channel</h6>
+      <li>/join name</li>
+      <h6>Join a channel</h6>
+      <li>/quit</li>
+      <h6>Quit a channel</h6>
+      <li>/users</li>
+      <h6>Show all users</h6>
+    </div>
+  </span>
+  <div id="message-container"></div>
+  <form id="send-container">
+    <input type="text" autocomplete="off" id="message-input">
+    <button type="submit" id="send-button">Send</button>
+  </form>
+  <script>
+    const roomName = "<%= roomName %>"
+    </script>
+  <script src="http://localhost:8000/socket.io/socket.io.js"></script>
+  <script src="/lib/jquery/jquery.min.js"></script>
+  <script src="/javascripts/script.js"></script>
+</body>
+</html>
